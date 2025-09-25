@@ -23,5 +23,15 @@ namespace Regular_RPG_Progect.Controls
             this.btnBack.Click += (s, e) => OnExit?.Invoke();
 
         }
+        private int health = 0;
+        public int Health
+        {
+            get { return health; }
+            set
+            {
+                health = value;
+               
+            }
+        }
     }
 }

@@ -6,16 +6,20 @@ namespace Regular_RPG_Progect.Entities.Characters
     {
         protected string _name;   
         protected int _level;
-        public BoundedValue Health { get; } = null;
+        public BoundedValue Health { get; protected set; } = null;
 
         public string Name { get { return _name; } }
         public int Level { get { return _level; } }
 
-        public Character(string name, int maxHealth, int level = 1)
+        public Character(string name, int level = 1)
         {
             _name = name;
             _level = level;
-            Health = new BoundedValue(0, maxHealth);
+        }
+
+        protected void CreateHealth(int maxHealth)
+        {
+            this.Health = new BoundedValue(0, maxHealth);
         }
     }
 }

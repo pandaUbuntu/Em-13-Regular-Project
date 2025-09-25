@@ -64,6 +64,11 @@
     <Compile Include="Controls\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Characters\Character.cs" />
+    <Compile Include="Entities\Characters\Enemy.cs" />
+    <Compile Include="Entities\Characters\Player.cs" />
+    <Compile Include="Entities\Items\Item.cs" />
+    <Compile Include="Entities\Items\Weapon.cs" />
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EnemyGenerator.cs" />
+    <Compile Include="Utils\BoundedValue.cs" />
+    <Compile Include="Utils\Effect.cs" />
     <EmbeddedResource Include="Controls\GameControl.resx">
       <DependentUpon>GameControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,8 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
