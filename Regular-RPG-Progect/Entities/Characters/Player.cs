@@ -47,10 +47,13 @@ namespace Regular_RPG_Progect.Entities.Characters
         public int CurrentExpirience { get { return _currentExpirience; } }
         public int ExpirienceLevelCap { get { return _expirienceLevelCap; } }
 
+        public PlayerClass Class { get; }
+
         public BoundedValue Mana { get; protected set; } = null;
 
         public Player(
             string name,
+            PlayerClass playerClass,
             int strength,
             int agility,
             int intelligence,
@@ -61,6 +64,7 @@ namespace Regular_RPG_Progect.Entities.Characters
             this._agility = agility;
             this._intelligence = intelligence;
             this._endurance = endurance;
+            this.Class = playerClass;
 
             this._critChance += this._agility * 0.5;
 

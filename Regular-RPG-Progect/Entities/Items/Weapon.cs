@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Regular_RPG_Progect.Entities.Items
 {
-    internal class Weapon
+    class Weapon : Item
     {
+        public Weapon(string name, int gamage) : base(name, gamage)
+        {
+        }
+
+        public int Damage { get { return _value; } }
     }
 }
