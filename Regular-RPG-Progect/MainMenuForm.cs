@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Regular_RPG_Progect.Controls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Regular_RPG_Progect
 {
@@ -23,7 +24,8 @@ namespace Regular_RPG_Progect
         {
             var menu = new MainMenuControl();
             menu.Dock = DockStyle.Fill;
-            menu.OnStartGame += () => ShowGame();
+            menu.OnStartGame += () => ShowChooseHero();
+            menu.OnLoadGame += () => ShowGame();
             menu.OnOpenSettings += () => ShowSettings();
 
             this.Controls.Clear();
@@ -48,6 +50,16 @@ namespace Regular_RPG_Progect
 
             this.Controls.Clear();
             this.Controls.Add(settings);
+        }
+
+        private void ShowChooseHero()
+        {
+            var chooseHero = new ChooseHeroControl();
+            chooseHero.Dock = DockStyle.Fill;
+            chooseHero.OnExit += () => ShowMainMenu();
+
+            this.Controls.Clear();
+            this.Controls.Add(chooseHero);
         }
     }
 }

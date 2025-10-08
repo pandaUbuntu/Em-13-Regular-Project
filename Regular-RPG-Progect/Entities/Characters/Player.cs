@@ -22,7 +22,7 @@ namespace Regular_RPG_Progect.Entities.Characters
         Mage
     }
 
-    class Player : Character
+    public class Player : Character
     {
         protected int _expirienceLevelCap = 0;
         protected int _currentExpirience = 0;
@@ -46,9 +46,7 @@ namespace Regular_RPG_Progect.Entities.Characters
         public int Money { get { return _money; } }
         public int CurrentExpirience { get { return _currentExpirience; } }
         public int ExpirienceLevelCap { get { return _expirienceLevelCap; } }
-
         public PlayerClass Class { get; }
-
         public BoundedValue Mana { get; protected set; } = null;
 
         public Player(

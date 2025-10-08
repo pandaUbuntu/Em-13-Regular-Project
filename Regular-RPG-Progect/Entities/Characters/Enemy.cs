@@ -8,13 +8,12 @@ namespace Regular_RPG_Progect.Entities.Characters
 {
     public enum EnemyType
     {
-        DamageDealer = 1,
-        Tank,
+        Tank = 1,
         Balanced,
         GlassCannon
     }
 
-    class Enemy : Character
+    public class Enemy : Character
     {
         private int _id;
         private static int autoInc = 1;

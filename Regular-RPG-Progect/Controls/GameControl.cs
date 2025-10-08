@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Regular_RPG_Progect.Entities.Characters;
 
 namespace Regular_RPG_Progect.Controls
 {
@@ -32,6 +33,13 @@ namespace Regular_RPG_Progect.Controls
                 health = value;
                
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Player player = new Player("Alex", PlayerClass.Paladin, 5, 3, 2, 4);
+
+            player.AddExpirience(100);
         }
     }
 }

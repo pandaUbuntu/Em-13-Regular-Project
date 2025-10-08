@@ -2,7 +2,7 @@
 
 namespace Regular_RPG_Progect.Entities.Characters
 {
-    abstract class Character
+    abstract public class Character
     {
         protected string _name;   
         protected int _level;

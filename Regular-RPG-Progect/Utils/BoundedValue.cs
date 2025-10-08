@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Regular_RPG_Progect.Utils
 {
-    class BoundedValue
+    public class BoundedValue
     {
         private int _min;
         private int _max;
