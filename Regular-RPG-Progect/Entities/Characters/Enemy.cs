@@ -39,5 +39,15 @@ namespace Regular_RPG_Progect.Entities.Characters
             _damage = damage;
             _defense = defense;
         }
+
+        public override void TakeDamage(int damage)
+        {
+            
+        }
+
+        public override int CausedDamage()
+        {
+            return 0;
+        }
     }
 }

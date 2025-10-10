@@ -21,5 +21,8 @@ namespace Regular_RPG_Progect.Entities.Characters
         {
             this.Health = new BoundedValue(0, maxHealth);
         }
+
+        public abstract void TakeDamage(int damage);
+        public abstract int CausedDamage();
     }
 }

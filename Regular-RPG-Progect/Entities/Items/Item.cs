@@ -3,7 +3,7 @@ using Regular_RPG_Progect.Entities.Characters;
 
 namespace Regular_RPG_Progect.Entities.Items
 {
-    abstract class Item
+    public abstract class Item
     {
         protected int _id;
         private static int autoInc = 1;

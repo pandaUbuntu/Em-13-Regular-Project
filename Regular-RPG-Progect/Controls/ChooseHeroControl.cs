@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using Regular_RPG_Progect.Controls.Components;
 using Regular_RPG_Progect.Utils;
 
 namespace Regular_RPG_Progect.Controls
@@ -36,6 +37,13 @@ namespace Regular_RPG_Progect.Controls
 
             
             this.Controls.Add(btnBack);
+        }
+
+        protected void BtnBack_Click(ImageButton sender, EventArgs e)
+        {
+
+
+            OnExit?.Invoke();
         }
     }
 }

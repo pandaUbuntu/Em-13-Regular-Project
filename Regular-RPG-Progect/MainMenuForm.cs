@@ -24,7 +24,7 @@ namespace Regular_RPG_Progect
             this.Controls.Add(menu);
         }
 
-        private void ShowNewGame()
+        private void ShowGame()
         {
             var game = new GameControl();
             game.Dock = DockStyle.Fill;

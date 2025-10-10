@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Regular_RPG_Progect.Entities.Items;
 using Regular_RPG_Progect.Utils;
 
 namespace Regular_RPG_Progect.Entities.Characters
@@ -28,10 +29,20 @@ namespace Regular_RPG_Progect.Entities.Characters
         Mage
     }
 
-    public class Player : Character
+    public enum PlayerType
+    {
+        Melee = 1,
+        Ranged,
+        Caster
+    }
+
+    public abstract class Player : Character
     {
         protected int _expirienceLevelCap = 0;
         protected int _currentExpirience = 0;
+
+        protected Weapon _equippedWeapon = null;
+        protected Armor _equippedArmor = null;
 
         protected int _money = 0;
 
@@ -47,7 +58,11 @@ namespace Regular_RPG_Progect.Entities.Characters
         public int CurrentExpirience { get { return _currentExpirience; } }
         public int ExpirienceLevelCap { get { return _expirienceLevelCap; } }
         public PlayerClass Class { get; }
+        public PlayerType Type { get; protected set; }
         public BoundedValue Mana { get; protected set; } = null;
+
+        public Weapon EquippedWeapon { get { return _equippedWeapon; } set { this._equippedWeapon = value; } }
+        public Armor EquippedArmor { get { return _equippedArmor; } set { this._equippedArmor = value; } }
 
         protected int getParamByName(Characteristic name)
         {
@@ -90,13 +105,14 @@ namespace Regular_RPG_Progect.Entities.Characters
             this.setParamByName(Characteristic.BaseCritChance, this.Agility);
         }
 
+
         public Player(
             string name,
             PlayerClass playerClass,
-            int strength,
-            int agility,
-            int intelligence,
-            int endurance
+            int strength = 1,
+            int agility = 1,
+            int intelligence = 1,
+            int endurance = 1
             ) : base(name, 1)
         {
             this.setParamByName(Characteristic.Strength, strength);
@@ -159,10 +175,10 @@ namespace Regular_RPG_Progect.Entities.Characters
         }
 
         protected void FillLevelUpParamsTemplate(
-            int strength = 1,
-            int agility = 1,
-            int intelligence = 1,
-            int endurance = 1
+            int strength = 0,
+            int agility = 0,
+            int intelligence = 0,
+            int endurance = 0
             )
         {
             this.SetLevelUpParamsTemplate(Characteristic.Strength, strength);
@@ -184,6 +200,16 @@ namespace Regular_RPG_Progect.Entities.Characters
             this.ResetHealth();
             this.ResetMana();
             this.ResetCritChance();
+        }
+
+        public override void TakeDamage(int damage)
+        {
+
+        }
+
+        public override int CausedDamage()
+        {
+            return 0;
         }
     }
 }
