@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using Regular_RPG_Progect.Controls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Regular_RPG_Progect.Entities.Characters;
 
 namespace Regular_RPG_Progect
 {
@@ -32,7 +24,7 @@ namespace Regular_RPG_Progect
             this.Controls.Add(menu);
         }
 
-        private void ShowGame()
+        private void ShowNewGame()
         {
             var game = new GameControl();
             game.Dock = DockStyle.Fill;
@@ -56,6 +48,7 @@ namespace Regular_RPG_Progect
         {
             var chooseHero = new ChooseHeroControl();
             chooseHero.Dock = DockStyle.Fill;
+            chooseHero.OnClassSelected += (playerClass) => ShowGame();
             chooseHero.OnExit += () => ShowMainMenu();
 
             this.Controls.Clear();

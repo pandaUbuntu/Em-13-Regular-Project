@@ -5,11 +5,11 @@ namespace Regular_RPG_Progect.Services
 {
     public class EnemyGenerator1
     {
-       /* private string[] strings = { "Goblin", "Orc", "Troll", "Bandit", "Wolf" };
+       private string[] strings = { "Goblin", "Orc", "Troll", "Bandit", "Wolf" };
 
         
 
-        private IEnemyFactory chooseFactory(EnemyType type)
+        /*private IEnemyFactory chooseFactory(EnemyType type)
         {
             switch (type)
             {
@@ -72,6 +72,5 @@ namespace Regular_RPG_Progect.Services
                 baseStatDef
                 );
         }*/
-
     }
 }

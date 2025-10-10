@@ -58,6 +58,9 @@
     <Compile Include="Controls\Components\AdvancedProgressBar.Designer.cs">
       <DependentUpon>AdvancedProgressBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Components\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\GameControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,17 +93,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\ArmorGenerator.cs" />
     <Compile Include="Services\EnemyGenerator\EnemyGenerator.cs" />
     <Compile Include="Services\EnemyGenerator\Factory\EnemyFactory.cs" />
     <Compile Include="Services\EnemyGenerator\Factory\IFactory.cs" />
     <Compile Include="Services\ItemGenerator.cs" />
     <Compile Include="Services\WeaponGenerator.cs" />
+    <Compile Include="Utils\AssetManager.cs" />
     <Compile Include="Utils\BoundedValue.cs" />
     <Compile Include="Utils\CustomRandom.cs" />
     <Compile Include="Utils\Effect.cs" />
     <EmbeddedResource Include="Controls\ChooseHeroControl.resx">
       <DependentUpon>ChooseHeroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Components\ImageButton.resx">
+      <DependentUpon>ImageButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\GameControl.resx">
       <DependentUpon>GameControl.cs</DependentUpon>
@@ -113,13 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,8 +141,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Content Include="Assets\dagger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\mage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\shield.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sword.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\tank.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\thief.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\tome.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
