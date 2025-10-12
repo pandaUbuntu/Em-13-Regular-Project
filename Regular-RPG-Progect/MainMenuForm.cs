@@ -1,6 +1,5 @@
 ﻿using System.Windows.Forms;
 using Regular_RPG_Progect.Controls;
-using Regular_RPG_Progect.Entities.Characters;
 
 namespace Regular_RPG_Progect
 {
@@ -33,7 +32,6 @@ namespace Regular_RPG_Progect
             this.Controls.Clear();
             this.Controls.Add(game);
         }
-
         private void ShowSettings()
         {
             var settings = new SettingsControl();
@@ -43,12 +41,12 @@ namespace Regular_RPG_Progect
             this.Controls.Clear();
             this.Controls.Add(settings);
         }
-
         private void ShowChooseHero()
         {
             var chooseHero = new ChooseHeroControl();
             chooseHero.Dock = DockStyle.Fill;
-            chooseHero.OnClassSelected += (playerClass) => ShowGame();
+
+            chooseHero.OnClassSelected += () => ShowGame();
             chooseHero.OnExit += () => ShowMainMenu();
 
             this.Controls.Clear();

@@ -34,6 +34,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxName = new System.Windows.Forms.TextBox();
             this.btnMage = new Regular_RPG_Progect.Controls.Components.ImageButton();
             this.btnRogue = new Regular_RPG_Progect.Controls.Components.ImageButton();
             this.btnTank = new Regular_RPG_Progect.Controls.Components.ImageButton();
@@ -103,6 +105,24 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Введіть ім\'я:";
+            // 
+            // txtBoxName
+            // 
+            this.txtBoxName.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxName.Location = new System.Drawing.Point(389, 41);
+            this.txtBoxName.Name = "txtBoxName";
+            this.txtBoxName.Size = new System.Drawing.Size(338, 41);
+            this.txtBoxName.TabIndex = 5;
+            // 
             // btnMage
             // 
             this.btnMage.BackgroundColor = System.Drawing.Color.DodgerBlue;
@@ -163,6 +183,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtBoxName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -175,6 +197,7 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +213,7 @@
         private Components.ImageButton btnMage;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Components.ImageButton imageButton1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxName;
     }
 }

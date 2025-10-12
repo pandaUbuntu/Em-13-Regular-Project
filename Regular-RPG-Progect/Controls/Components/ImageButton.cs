@@ -77,7 +77,7 @@ namespace Regular_RPG_Progect.Controls.Components
             base.OnMouseUp(e);
             _pressed = false;
             Invalidate();
-            OnClick(EventArgs.Empty);
+            //OnClick(EventArgs.Empty);
         }
         protected override void OnPaint(PaintEventArgs e)
         {

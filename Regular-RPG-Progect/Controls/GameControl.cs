@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Regular_RPG_Progect.Controls.Components;
 using Regular_RPG_Progect.Entities.Characters;
+using Regular_RPG_Progect.Utils;
 
 namespace Regular_RPG_Progect.Controls
 {
@@ -19,11 +14,12 @@ namespace Regular_RPG_Progect.Controls
         {
             InitializeComponent();
 
-            
+            this.UpdateScreen(Singleton.GetInstance().Player);
+            this.lblPlayerName.Text = Singleton.GetInstance().Player.Name;
 
             this.btnBack.Click += (s, e) => OnExit?.Invoke();
-
         }
+
         private int health = 0;
         public int Health
         {
@@ -31,15 +27,58 @@ namespace Regular_RPG_Progect.Controls
             set
             {
                 health = value;
-               
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void UpdateBoundedValue(BoundedValue boundedValue, AdvancedProgressBar bar)
         {
-            Player player = new Player("Alex", PlayerClass.Paladin, 5, 3, 2, 4);
+            bar.MaxValue = boundedValue.Max;
+            bar.CurrentValue = boundedValue.Value;
+        }
 
-            player.AddExpirience(100);
+        public void UpdateExpValue(Player player)
+        {
+            if (player == null)
+                throw new Exception("Player not found");
+
+            UpdateBoundedValue(player.Expirience, expirienceBar);
+        }
+
+        public void UpdateBoundedValues(Player player)
+        {
+            if (player == null)
+                throw new Exception("Player not found");
+
+            UpdateBoundedValue(player.Health, playerHealthBar);
+            UpdateBoundedValue(player.Mana, playerManaBar);
+        }
+
+        public void UpdatePlayerLbl(Player player)
+        {
+            if (player == null)
+                throw new Exception("Player not found");
+
+            this.lblClass.Text = player.Class.ToString();
+            this.lblLevel.Text = player.Level.ToString();
+
+            this.lblStrenght.Text = player.Strength.ToString();
+            this.lblIntelligence.Text = player.Intelligence.ToString();
+            this.lblEndurance.Text = player.Endurance.ToString();
+            this.lblAgility.Text = player.Agility.ToString();
+
+            this.lblMoney.Text = player.Money.ToString();
+        }
+
+        public void UpdateScreen(Player player)
+        {
+            if (player == null)
+                throw new Exception("Player not found");
+
+            this.UpdateBoundedValues(player);
+            this.UpdateExpValue(player);
+            this.UpdatePlayerLbl(player);
+
+            MessageBox.Show($"Final {playerHealthBar.CurrentValue} {playerHealthBar.MaxValue}");
         }
     }
 }

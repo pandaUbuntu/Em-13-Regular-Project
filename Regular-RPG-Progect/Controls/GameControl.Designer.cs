@@ -33,25 +33,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.LogTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.playerManaBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
-            this.playerHealthBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
             this.grpExpirience = new System.Windows.Forms.GroupBox();
             this.grpCharacteristics = new System.Windows.Forms.GroupBox();
-            this.expirienceBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblLevel = new System.Windows.Forms.Label();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblStrenght = new System.Windows.Forms.Label();
-            this.lblAgility = new System.Windows.Forms.Label();
-            this.lblIntelligence = new System.Windows.Forms.Label();
-            this.lblEndurance = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
+            this.lblEndurance = new System.Windows.Forms.Label();
+            this.lblIntelligence = new System.Windows.Forms.Label();
+            this.lblAgility = new System.Windows.Forms.Label();
+            this.lblStrenght = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.expirienceBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
+            this.playerManaBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
+            this.playerHealthBar = new Regular_RPG_Progect.Controls.Components.AdvancedProgressBar();
             this.groupBox1.SuspendLayout();
             this.grpExpirience.SuspendLayout();
             this.grpCharacteristics.SuspendLayout();
@@ -91,9 +91,9 @@
             // 
             // LogTextBox
             // 
-            this.LogTextBox.Location = new System.Drawing.Point(3, 426);
+            this.LogTextBox.Location = new System.Drawing.Point(3, 384);
             this.LogTextBox.Name = "LogTextBox";
-            this.LogTextBox.Size = new System.Drawing.Size(894, 128);
+            this.LogTextBox.Size = new System.Drawing.Size(894, 170);
             this.LogTextBox.TabIndex = 3;
             this.LogTextBox.Text = "";
             // 
@@ -106,30 +106,6 @@
             this.groupBox1.Size = new System.Drawing.Size(430, 100);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            // 
-            // playerManaBar
-            // 
-            this.playerManaBar.BarColor = System.Drawing.Color.SkyBlue;
-            this.playerManaBar.CurrentValue = 100;
-            this.playerManaBar.Location = new System.Drawing.Point(8, 62);
-            this.playerManaBar.Margin = new System.Windows.Forms.Padding(6);
-            this.playerManaBar.MaxValue = 200;
-            this.playerManaBar.MinValue = 0;
-            this.playerManaBar.Name = "playerManaBar";
-            this.playerManaBar.Size = new System.Drawing.Size(412, 30);
-            this.playerManaBar.TabIndex = 1;
-            // 
-            // playerHealthBar
-            // 
-            this.playerHealthBar.BarColor = System.Drawing.Color.Crimson;
-            this.playerHealthBar.CurrentValue = 100;
-            this.playerHealthBar.Location = new System.Drawing.Point(8, 24);
-            this.playerHealthBar.Margin = new System.Windows.Forms.Padding(6);
-            this.playerHealthBar.MaxValue = 200;
-            this.playerHealthBar.MinValue = 0;
-            this.playerHealthBar.Name = "playerHealthBar";
-            this.playerHealthBar.Size = new System.Drawing.Size(412, 30);
-            this.playerHealthBar.TabIndex = 0;
             // 
             // grpExpirience
             // 
@@ -159,130 +135,19 @@
             this.grpCharacteristics.Controls.Add(this.label1);
             this.grpCharacteristics.Location = new System.Drawing.Point(446, 144);
             this.grpCharacteristics.Name = "grpCharacteristics";
-            this.grpCharacteristics.Size = new System.Drawing.Size(430, 276);
+            this.grpCharacteristics.Size = new System.Drawing.Size(430, 234);
             this.grpCharacteristics.TabIndex = 6;
             this.grpCharacteristics.TabStop = false;
             this.grpCharacteristics.Text = "Характеристики";
             // 
-            // expirienceBar
+            // lblMoney
             // 
-            this.expirienceBar.BarColor = System.Drawing.Color.YellowGreen;
-            this.expirienceBar.CurrentValue = 0;
-            this.expirienceBar.Location = new System.Drawing.Point(9, 36);
-            this.expirienceBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.expirienceBar.MaxValue = 100;
-            this.expirienceBar.MinValue = 0;
-            this.expirienceBar.Name = "expirienceBar";
-            this.expirienceBar.Size = new System.Drawing.Size(412, 30);
-            this.expirienceBar.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Клас:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Сила:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Витривалість:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 26);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Інтелект:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Рівень:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 26);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Спритність:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 26);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Гроші:";
-            // 
-            // lblLevel
-            // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(159, 41);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(24, 26);
-            this.lblLevel.TabIndex = 7;
-            this.lblLevel.Text = "0";
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(159, 67);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(24, 26);
-            this.lblClass.TabIndex = 8;
-            this.lblClass.Text = "0";
-            // 
-            // lblStrenght
-            // 
-            this.lblStrenght.AutoSize = true;
-            this.lblStrenght.Location = new System.Drawing.Point(159, 93);
-            this.lblStrenght.Name = "lblStrenght";
-            this.lblStrenght.Size = new System.Drawing.Size(24, 26);
-            this.lblStrenght.TabIndex = 9;
-            this.lblStrenght.Text = "0";
-            // 
-            // lblAgility
-            // 
-            this.lblAgility.AutoSize = true;
-            this.lblAgility.Location = new System.Drawing.Point(159, 119);
-            this.lblAgility.Name = "lblAgility";
-            this.lblAgility.Size = new System.Drawing.Size(24, 26);
-            this.lblAgility.TabIndex = 10;
-            this.lblAgility.Text = "0";
-            // 
-            // lblIntelligence
-            // 
-            this.lblIntelligence.AutoSize = true;
-            this.lblIntelligence.Location = new System.Drawing.Point(159, 145);
-            this.lblIntelligence.Name = "lblIntelligence";
-            this.lblIntelligence.Size = new System.Drawing.Size(24, 26);
-            this.lblIntelligence.TabIndex = 11;
-            this.lblIntelligence.Text = "0";
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Location = new System.Drawing.Point(159, 197);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(24, 26);
+            this.lblMoney.TabIndex = 13;
+            this.lblMoney.Text = "0";
             // 
             // lblEndurance
             // 
@@ -293,14 +158,149 @@
             this.lblEndurance.TabIndex = 12;
             this.lblEndurance.Text = "0";
             // 
-            // lblMoney
+            // lblIntelligence
             // 
-            this.lblMoney.AutoSize = true;
-            this.lblMoney.Location = new System.Drawing.Point(159, 197);
-            this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(24, 26);
-            this.lblMoney.TabIndex = 13;
-            this.lblMoney.Text = "0";
+            this.lblIntelligence.AutoSize = true;
+            this.lblIntelligence.Location = new System.Drawing.Point(159, 145);
+            this.lblIntelligence.Name = "lblIntelligence";
+            this.lblIntelligence.Size = new System.Drawing.Size(24, 26);
+            this.lblIntelligence.TabIndex = 11;
+            this.lblIntelligence.Text = "0";
+            // 
+            // lblAgility
+            // 
+            this.lblAgility.AutoSize = true;
+            this.lblAgility.Location = new System.Drawing.Point(159, 119);
+            this.lblAgility.Name = "lblAgility";
+            this.lblAgility.Size = new System.Drawing.Size(24, 26);
+            this.lblAgility.TabIndex = 10;
+            this.lblAgility.Text = "0";
+            // 
+            // lblStrenght
+            // 
+            this.lblStrenght.AutoSize = true;
+            this.lblStrenght.Location = new System.Drawing.Point(159, 93);
+            this.lblStrenght.Name = "lblStrenght";
+            this.lblStrenght.Size = new System.Drawing.Size(24, 26);
+            this.lblStrenght.TabIndex = 9;
+            this.lblStrenght.Text = "0";
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Location = new System.Drawing.Point(159, 67);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(24, 26);
+            this.lblClass.TabIndex = 8;
+            this.lblClass.Text = "0";
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(159, 41);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(24, 26);
+            this.lblLevel.TabIndex = 7;
+            this.lblLevel.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 26);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Гроші:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 119);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 26);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Спритність:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 26);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Рівень:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 26);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Інтелект:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 26);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Витривалість:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 26);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Сила:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Клас:";
+            // 
+            // expirienceBar
+            // 
+            this.expirienceBar.BarColor = System.Drawing.Color.YellowGreen;
+            this.expirienceBar.CurrentValue = 0;
+            this.expirienceBar.Location = new System.Drawing.Point(9, 36);
+            this.expirienceBar.Margin = new System.Windows.Forms.Padding(6);
+            this.expirienceBar.MaxValue = 100;
+            this.expirienceBar.MinValue = 0;
+            this.expirienceBar.Name = "expirienceBar";
+            this.expirienceBar.Size = new System.Drawing.Size(412, 30);
+            this.expirienceBar.TabIndex = 0;
+            // 
+            // playerManaBar
+            // 
+            this.playerManaBar.BarColor = System.Drawing.Color.SkyBlue;
+            this.playerManaBar.CurrentValue = 100;
+            this.playerManaBar.Location = new System.Drawing.Point(8, 62);
+            this.playerManaBar.Margin = new System.Windows.Forms.Padding(6);
+            this.playerManaBar.MaxValue = 200;
+            this.playerManaBar.MinValue = 0;
+            this.playerManaBar.Name = "playerManaBar";
+            this.playerManaBar.Size = new System.Drawing.Size(412, 30);
+            this.playerManaBar.TabIndex = 1;
+            // 
+            // playerHealthBar
+            // 
+            this.playerHealthBar.BarColor = System.Drawing.Color.Crimson;
+            this.playerHealthBar.CurrentValue = 300;
+            this.playerHealthBar.Location = new System.Drawing.Point(8, 24);
+            this.playerHealthBar.Margin = new System.Windows.Forms.Padding(6);
+            this.playerHealthBar.MaxValue = 400;
+            this.playerHealthBar.MinValue = 0;
+            this.playerHealthBar.Name = "playerHealthBar";
+            this.playerHealthBar.Size = new System.Drawing.Size(412, 30);
+            this.playerHealthBar.TabIndex = 0;
             // 
             // GameControl
             // 

@@ -79,9 +79,14 @@
     <Compile Include="Controls\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Characters\Caster.cs" />
     <Compile Include="Entities\Characters\Character.cs" />
     <Compile Include="Entities\Characters\Enemy.cs" />
+    <Compile Include="Entities\Characters\Melee.cs" />
     <Compile Include="Entities\Characters\Player.cs" />
+    <Compile Include="Entities\Characters\PlayerClasses\Mage.cs" />
+    <Compile Include="Entities\Characters\PlayerClasses\Paladin.cs" />
+    <Compile Include="Entities\Characters\PlayerClasses\TreasureHunter.cs" />
     <Compile Include="Entities\Items\Armor.cs" />
     <Compile Include="Entities\Items\Item.cs" />
     <Compile Include="Entities\Items\Weapon.cs" />
@@ -106,8 +111,11 @@
     <Compile Include="Services\WeaponGenerator.cs" />
     <Compile Include="Utils\AssetManager.cs" />
     <Compile Include="Utils\BoundedValue.cs" />
+    <Compile Include="Utils\CreatePlayerHelper.cs" />
     <Compile Include="Utils\CustomRandom.cs" />
     <Compile Include="Utils\Effect.cs" />
+    <Compile Include="Utils\MessageBoxHelper.cs" />
+    <Compile Include="Utils\Singleton.cs" />
     <EmbeddedResource Include="Controls\ChooseHeroControl.resx">
       <DependentUpon>ChooseHeroControl.cs</DependentUpon>
     </EmbeddedResource>

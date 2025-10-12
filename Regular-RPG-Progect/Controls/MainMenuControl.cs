@@ -13,7 +13,6 @@ namespace Regular_RPG_Progect.Controls
         {
             InitializeComponent();
 
-
             Button btnGame = new Button { Text = "Нова Гра", Dock = DockStyle.Top, Height = 40 };
             Button btnLoadGame = new Button { Text = "Завантажити Гру", Dock = DockStyle.Top, Height = 40 };
             Button btnSettings = new Button { Text = "Налаштування", Dock = DockStyle.Top, Height = 40 };

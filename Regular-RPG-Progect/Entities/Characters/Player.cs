@@ -38,9 +38,6 @@ namespace Regular_RPG_Progect.Entities.Characters
 
     public abstract class Player : Character
     {
-        protected int _expirienceLevelCap = 0;
-        protected int _currentExpirience = 0;
-
         protected Weapon _equippedWeapon = null;
         protected Armor _equippedArmor = null;
 
@@ -55,11 +52,10 @@ namespace Regular_RPG_Progect.Entities.Characters
         public int Endurance { get { return getParamByName(Characteristic.Endurance); } }
         public int CritChance { get { return getParamByName(Characteristic.CritChance) + getParamByName(Characteristic.BaseCritChance); } }
         public int Money { get { return _money; } }
-        public int CurrentExpirience { get { return _currentExpirience; } }
-        public int ExpirienceLevelCap { get { return _expirienceLevelCap; } }
         public PlayerClass Class { get; }
         public PlayerType Type { get; protected set; }
         public BoundedValue Mana { get; protected set; } = null;
+        public BoundedValue Expirience { get; protected set; } = null;
 
         public Weapon EquippedWeapon { get { return _equippedWeapon; } set { this._equippedWeapon = value; } }
         public Armor EquippedArmor { get { return _equippedArmor; } set { this._equippedArmor = value; } }
@@ -115,17 +111,18 @@ namespace Regular_RPG_Progect.Entities.Characters
             int endurance = 1
             ) : base(name, 1)
         {
+            this.Class = playerClass;
+
             this.setParamByName(Characteristic.Strength, strength);
             this.setParamByName(Characteristic.Agility, agility);
             this.setParamByName(Characteristic.Intelligence, intelligence);
-            this.setParamByName(Characteristic.Endurance, endurance);
-            this.Class = playerClass;
-
+            this.setParamByName(Characteristic.Endurance, endurance);        
             this.setParamByName(Characteristic.BaseCritChance, agility);
 
-            this._expirienceLevelCap = 1000;
             this.CreateHealth(endurance * 100);
             this.Mana = new BoundedValue(0, intelligence * 50);
+            this.Expirience = new BoundedValue(max: 1000, currentZero: true);
+            
         }
 
         public int AddMoney(int amount)
@@ -155,13 +152,13 @@ namespace Regular_RPG_Progect.Entities.Characters
             if (amount < 0)
                 throw new ArgumentException("Amount must be non-negative.");
 
-            _currentExpirience += amount;
-            while (_currentExpirience >= _expirienceLevelCap)
+            this.Expirience.Increase(amount);
+            while (this.Expirience.Value >= this.Expirience.Max)
             {
-                _currentExpirience -= _expirienceLevelCap;
+                this.Expirience.Decrease(this.Expirience.Max);
                 this.LevelUp();
             }
-            return _currentExpirience;
+            return this.Expirience.Value;
         }
 
         private void SetLevelUpParamsTemplate(Characteristic characteristic, int value)
@@ -190,7 +187,7 @@ namespace Regular_RPG_Progect.Entities.Characters
         public void LevelUp()
         {
             _level++;
-            _expirienceLevelCap = (int)(_expirienceLevelCap * 1000);
+            this.Expirience.ResetValue(_level * 1000, true);
 
             this.addParamByName(Characteristic.Strength, this._levelUpParamsTemplate[Characteristic.Strength]);
             this.addParamByName(Characteristic.Agility, this._levelUpParamsTemplate[Characteristic.Agility]);
